@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="home-layout">
+
+    <!-- LEFT : 1/5 -->
+    <div class="left-panel">
+        <h2>Select Quiz</h2>
+
+        <button onclick="showTopicInfo('Finance')"class="topic-btn">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135706.png">
+            <span>Finance</span>
+        </button>
+
+        <button onclick="showTopicInfo('GK')" class="topic-btn">
+            <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png">
+            <span>GK</span>
+        </button>
+
+        <button onclick="showTopicInfo('GS')" class="topic-btn">
+            <img src="https://cdn-icons-png.flaticon.com/512/3771/3771417.png">
+            <span>GS</span>
+        </button>
+
+        <button onclick="showTopicInfo('AI')" class="topic-btn">
+    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png">
+    <span>Artificial Intelligence</span>
+</button>
+
+
+        <button onclick="showTopicInfo('All')" class="topic-btn">
+            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png">
+            <span>All</span>
+        </button>
+
+    </div>
+
+    <!-- RIGHT : 4/5 -->
+    <div class="right-panel">
+        <!-- WELCOME SCREEN -->
+<div class="welcome-screen" id="welcomeScreen">
+
+    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135706.png"alt="Quiz App Logo" class="welcome-logo"> 
+    <h1>Welcome to the Quiz App 👋</h1>
+    <p>
+        This platform is designed to help you test and improve your knowledge across multiple subjects, including Finance, General Knowledge, Artificial Inteligence, and General Studies. Each quiz is time-based and carefully structured to challenge your understanding while keeping learning engaging and fun.
+    </p>
+   
+</div>
+
+        <!-- TOPIC INFO SCREEN -->
+<div class="topic-info" id="topicInfo" style="display:none;">
+    <h2 id="topicTitle"></h2>
+    <p id="topicDesc"></p>
+   <button onclick="handleStartQuiz()">Start Quiz</button>
+
+</div>
+
+
+        <div class="quiz-container" id="quizContainer" style="display:none;">
+            <p id="category" class="category"></p>
+            <p id="counter"></p>
+
+            <div class="progress">
+                <div id="progress-bar"></div>
+            </div>
+
+            <h2 id="question"></h2>
+            <p id="timer"></p>
+
+            <ul>
+                <li>
+                    <input type="radio" name="answer" id="a" class="answer">
+                    <label for="a" id="a_text"></label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="b" class="answer">
+                    <label for="b" id="b_text"></label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="c" class="answer">
+                    <label for="c" id="c_text"></label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="d" class="answer">
+                    <label for="d" id="d_text"></label>
+                </li>
+            </ul>
+
+            <button id="submit">Submit</button>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
